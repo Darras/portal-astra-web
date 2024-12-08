@@ -1,8 +1,94 @@
-#root {
-  max-width: 1280px;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #1b1b2f; /* Azul marinho escuro */
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #162447; /* Azul marinho */
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  height: 50px;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #e0e0e0;
+  font-weight: bold;
+}
+
+.banner {
   text-align: center;
+  padding: 60px 20px;
+  background-color: #0f3460; /* Azul marinho mais escuro */
+}
+
+.banner h1 {
+  font-size: 2.5em;
+  color: #00d4ff; /* Verde água */
+}
+
+.banner p {
+  font-size: 1.2em;
+  color: #a29bfe; /* Roxo */
+}
+
+.services {
+  padding: 40px 20px;
+  background-color: #1f4068; /* Azul marinho médio */
+  width: 100%;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  background-color: #fff; /* Cor de fundo branca para contraste */
+  padding: 20px;
+  border-radius: 10px;
+  color: #1b1b2f; /* Texto em azul marinho escuro */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #162447; /* Azul marinho */
+  color: #e0e0e0;
+  width: 100%;
 }
 
 .logo {
@@ -11,11 +97,13 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em rgba(100, 108, 255, 0.67));
 }
+
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em rgba(97, 218, 251, 0.67));
 }
 
 @keyframes logo-spin {
@@ -28,13 +116,9 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
+  .logo.react {
     animation: logo-spin infinite 20s linear;
   }
-}
-
-.card {
-  padding: 2em;
 }
 
 .read-the-docs {
